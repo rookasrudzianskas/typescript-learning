@@ -8,7 +8,6 @@
 //         this.name = name;
 //     }
 // }
-// const rokas = new User("h@h.com","Rokas");
 // rokas.city = "Delhi"; // Error: Cannot assign to 'city' because it is a read-only property.
 // rokas.city = 4; // Error
 class User {
@@ -17,6 +16,9 @@ class User {
         this.name = name;
         this._courseCount = 1;
         this.city = "New York";
+    }
+    deleteToken() {
+        console.log("Token deleted");
     }
     get getAppleEmail() {
         return `apple${this.email}`;
@@ -31,3 +33,14 @@ class User {
         this._courseCount = courseNumber;
     }
 }
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        // it cannot acquire private properties
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 2;
+    }
+}
+const rokas = new User("h@h.com", "Rokas");

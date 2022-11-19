@@ -24,4 +24,11 @@ function getDbId(id) {
 var data = [1, 2, 3, 4];
 var data2 = ["1", "2", "3", "4"];
 var data3 = [1, "2", "3", "4", true];
+var pi = 3.14;
+// pi = 3.15; // Error
+var seatAllotment;
+seatAllotment = "window";
+seatAllotment = "aisle";
+seatAllotment = "middle";
+// seatAllotment = "back"; // Error
 //# sourceMappingURL=union.js.map

@@ -104,13 +104,13 @@ interface Rectangle {
     width: number;
 }
 
-type Shape = Circle | Square;
+type Shape = Circle | Square | Rectangle;
 
 function getTrueShape(shape: Shape) {
     if(shape.kind === "circle") {
         return Math.PI * shape.radius ** 2;
     }
-    return shape.side * shape.side;
+    // return shape.side * shape.side;
 }
 
 function getArea(shape: Shape) {
@@ -119,6 +119,10 @@ function getArea(shape: Shape) {
             return Math.PI * shape.radius ** 2;
         case "square":
             return shape.side * shape.side;
+        case "rectangle":
+            return shape.length * shape.width;
+        default:
+            return shape;
     }
 }
 

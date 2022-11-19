@@ -15,6 +15,19 @@ class User {
     constructor(email, name) {
         this.email = email;
         this.name = name;
+        this._courseCount = 1;
         this.city = "New York";
+    }
+    get getAppleEmail() {
+        return `apple${this.email}`;
+    }
+    get courseCount() {
+        return this._courseCount;
+    }
+    set courseCount(courseNumber) {
+        if (courseNumber <= 1) {
+            throw new Error("Course number should be greater than 1");
+        }
+        this._courseCount = courseNumber;
     }
 }

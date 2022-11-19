@@ -13,12 +13,28 @@
 // rokas.city = 4; // Error
 
 class User {
+
+    private _courseCount = 1;
+
     readonly city: string = "New York";
     constructor(
         public email: string,
         public name: string,
         // private userId: string,
-    ) {
+    ) {}
 
+    get getAppleEmail(): string {
+        return `apple${this.email}`;
+    }
+
+    get courseCount(): number {
+        return this._courseCount;
+    }
+
+    set courseCount(courseNumber) {
+        if(courseNumber <= 1) {
+            throw new Error("Course number should be greater than 1");
+        }
+        this._courseCount = courseNumber;
     }
 }

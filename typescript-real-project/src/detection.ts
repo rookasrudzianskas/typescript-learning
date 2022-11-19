@@ -121,6 +121,7 @@ function getArea(shape: Shape) {
             return shape.side * shape.side;
         case "rectangle":
             return shape.length * shape.width;
+            // the default should never run
         default:
             const _defaultforshape: never = shape;
             return _defaultforshape;

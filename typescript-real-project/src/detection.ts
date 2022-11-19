@@ -89,12 +89,19 @@ function getFood(pet: Fish | Bird) {
 
 interface Circle {
     kind: "circle";
+    radius: number;
 }
 
 interface Square {
     kind: "square";
+    side: number;
 }
 
+interface Rectangle {
+    kind: "rectangle";
+    length: number;
+    width: number;
+}
 
 
 

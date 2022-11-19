@@ -23,3 +23,16 @@ function identityFour(val) {
 }
 // in this case we pass the custom type
 identityFour({ brand: "Coca Cola", type: 1 });
+// products: T[] - this is the type of value we are taking
+// T is the type of what we are returning
+// T should be value from that array
+function getSearchProducts(products) {
+    // Do some database operations
+    const myIndex = 3;
+    return products[myIndex];
+}
+// const getMoreSearchProducts = (products: number[]): number => {
+//     // Do some database operations
+//     const myIndex = 4;
+//     return products[myIndex];
+// }

@@ -87,8 +87,13 @@ function getFood(pet: Fish | Bird) {
     }
 }
 
+interface Circle {
+    kind: "circle";
+}
 
-
+interface Square {
+    kind: "square";
+}
 
 
 

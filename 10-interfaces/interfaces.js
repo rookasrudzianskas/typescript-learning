@@ -1,4 +1,9 @@
-var rokas = { dbId: 22, email: "rokas@rokas.com", userId: 2211,
+var rokas = {
+    dbId: 22,
+    email: "rokas@rokas.com",
+    userId: 2211,
+    role: "admin",
+    githubToken: "github",
     startTrail: function () {
         return "trail started";
     },

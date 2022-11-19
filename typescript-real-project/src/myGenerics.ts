@@ -49,6 +49,12 @@ function getSearchProducts<T>(products: T[]): T {
 //     return products[myIndex];
 // }
 
+// , this is syntax for generics
+// const getMoreSearchProducts = <T,>(products: T[]): T => {
+//     // Do some database operations
+//     const myIndex = 4;
+//     return products[myIndex];
+// }
 
 
 

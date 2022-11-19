@@ -7,4 +7,14 @@ let myNum = 6;
 greetings.toUpperCase(); // OK
 console.log(greetings);
 
+// Number
+let userId = 1235345.343;
+userId.toFixed(2); // OK
+// userId = "rokas"; // Error: Type '"rokas"' is not assignable to type 'number'.
+const isLogged: boolean = true;
+// isLogged.valueOf(); // OK
+
+// String
+
+
 export {};

@@ -31,14 +31,19 @@ function getSearchProducts(products) {
     const myIndex = 3;
     return products[myIndex];
 }
-// const getMoreSearchProducts = (products: number[]): number => {
-//     // Do some database operations
-//     const myIndex = 4;
-//     return products[myIndex];
-// }
-// , this is syntax for generics
-// const getMoreSearchProducts = <T,>(products: T[]): T => {
-//     // Do some database operations
-//     const myIndex = 4;
-//     return products[myIndex];
-// }
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+class Sellable {
+    constructor() {
+        // it is a T of what we are taking, but making it as array
+        this.cart = [];
+    }
+    addToCart(products) {
+        // We push products to cart
+        this.cart.push(products);
+    }
+}

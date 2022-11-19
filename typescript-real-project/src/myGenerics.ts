@@ -58,6 +58,50 @@ function getSearchProducts<T>(products: T[]): T {
 
 
 
+interface Database {
+    connection: string;
+    username: string;
+    password: string;
+}
+function anotherFunction<T, U extends Database>(valOne: T, valTwo: U):object {
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFunction(3, {
+//     connection: "localhost",
+//     username: "root",
+//     password: "1234"
+// });
+
+interface Quiz {
+    name: string;
+    type: string;
+}
+
+interface Course {
+    name: string;
+    author: string;
+    subject: string;
+}
+
+class Sellable<T> {
+    // it is a T of what we are taking, but making it as array
+    public cart: T[] = [];
+
+    addToCart(products: T) {
+        // We push products to cart
+        this.cart.push(products);
+    }
+
+}
+
+
+
+
+
 
 
 

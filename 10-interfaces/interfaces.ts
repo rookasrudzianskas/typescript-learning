@@ -3,17 +3,16 @@ interface User {
     email: string;
     userId: number;
     googleId?: string;
-    startTrail: () => string;
+    startTrail(): string;
+    getCoupon(couponname: string): number;
 }
-
-// Hey does pilot work?
-// Do you work ok?
-// GitHub are you working???
-// Any help? Bro??? Bro? Any help? Thanks bro.
 
 const rokas: User = {dbId: 22, email: "rokas@rokas.com", userId: 2211,
     startTrail: () => {
-
+        return "trail started";
+    },
+    getCoupon: (name: "Rokas") => {
+        return 10;
     }
 };
 

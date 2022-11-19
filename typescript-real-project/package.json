@@ -1,0 +1,8 @@
+{
+  "name": "LEARNING_TYPESCRIPT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rookasrudzianskas/typescript-docs.git",
+  "author": "Rokas <rookas.rudzenskas@gmail.com>",
+  "license": "MIT"
+}

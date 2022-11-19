@@ -12,3 +12,18 @@ function provideId(id: string | null) {
     }
     id.toLowerCase();
 }
+
+
+function printAll(strs: string | string[] | null) {
+    if (strs) {
+        if(typeof strc === "object") {
+            for (const s of strs) {
+                console.log(s);
+            }
+        }
+    } else if (typeof strs === "string") {
+        console.log(strs);
+    } else {
+        // do nothing
+    }
+}

@@ -40,7 +40,9 @@ interface Admin {
     isAdmin: boolean;
 }
 
-function isAdmin(account: User | Admin) {
+function isAdminAccount(account: User | Admin) {
+    // checks if isAdmin is in account interface
+    // narrowing with in property
     if("isAdmin" in account) {
         return account.isAdmin;
     }

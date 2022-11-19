@@ -27,7 +27,9 @@ function printAll(strs) {
         // do nothing
     }
 }
-function isAdmin(account) {
+function isAdminAccount(account) {
+    // checks if isAdmin is in account interface
+    // narrowing with in property
     if ("isAdmin" in account) {
         return account.isAdmin;
     }

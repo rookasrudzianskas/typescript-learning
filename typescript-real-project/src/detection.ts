@@ -53,6 +53,8 @@ function isAdminAccount(account: User | Admin) {
 
 
 function logValue(x: Date | string) {
+    // checks if x is instance of date
+    // narrowing with instanceof
     if (x instanceof Date) {
         console.log(x.toUTCString());
     } else {
@@ -60,9 +62,30 @@ function logValue(x: Date | string) {
     }
 }
 
+type Fish = {
+    swim: () => void;
+};
 
+type Bird = {
+    fly: () => void;
+};
 
+// this shows, that pet is going to be fish for sure
+function isFish(pet: Fish | Bird): pet is Fish {
+    // narrowing with type guard
+    // if it as method swim, then it is a fish
+    return (pet as Fish).swim !== undefined;
+}
 
+function getFood(pet: Fish | Bird) {
+    if(isFish(pet)) {
+        pet
+        return "fish food";
+    } else {
+        pet
+        return "bird food";
+    }
+}
 
 
 

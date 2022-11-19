@@ -36,10 +36,28 @@ function isAdminAccount(account) {
     return false;
 }
 function logValue(x) {
+    // checks if x is instance of date
+    // narrowing with instanceof
     if (x instanceof Date) {
         console.log(x.toUTCString());
     }
     else {
         console.log(x.toUpperCase());
+    }
+}
+// this shows, that pet is going to be fish for sure
+function isFish(pet) {
+    // narrowing with type guard
+    // if it as method swim, then it is a fish
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "bird food";
     }
 }

@@ -16,14 +16,34 @@ function provideId(id: string | null) {
 
 function printAll(strs: string | string[] | null) {
     if (strs) {
-        if(typeof strc === "object") {
-            for (const s of strs) {
-                console.log(s);
-            }
-        }
+        // if(typeof strc === "object") {
+        //     for (const s of strs) {
+        //         console.log(s);
+        //     }
+        // }
     } else if (typeof strs === "string") {
         console.log(strs);
     } else {
         // do nothing
     }
 }
+
+
+interface User {
+    name: string;
+    email: string;
+}
+
+interface Admin {
+    name: string;
+    email: string;
+    isAdmin: boolean;
+}
+
+function isAdmin(account: User | Admin) {
+    if("isAdmin" in account) {
+        return account.isAdmin;
+    }
+    return false;
+}
+

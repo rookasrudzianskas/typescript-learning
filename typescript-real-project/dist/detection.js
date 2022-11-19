@@ -14,11 +14,11 @@ function provideId(id) {
 }
 function printAll(strs) {
     if (strs) {
-        if (typeof strc === "object") {
-            for (const s of strs) {
-                console.log(s);
-            }
-        }
+        // if(typeof strc === "object") {
+        //     for (const s of strs) {
+        //         console.log(s);
+        //     }
+        // }
     }
     else if (typeof strs === "string") {
         console.log(strs);
@@ -26,4 +26,10 @@ function printAll(strs) {
     else {
         // do nothing
     }
+}
+function isAdmin(account) {
+    if ("isAdmin" in account) {
+        return account.isAdmin;
+    }
+    return false;
 }

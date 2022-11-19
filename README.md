@@ -1,2 +1,2 @@
-# typescript-docs
+# typescript-learning
 TS shotout

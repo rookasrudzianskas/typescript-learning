@@ -122,7 +122,8 @@ function getArea(shape: Shape) {
         case "rectangle":
             return shape.length * shape.width;
         default:
-            return shape;
+            const _defaultforshape: never = shape;
+            return _defaultforshape;
     }
 }
 
